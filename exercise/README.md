@@ -176,43 +176,43 @@ You’re creating a simple calculator API with FastAPI. Users can perform basic 
 
 1. **Red:** Start by writing a test for a new route:
 
-```python
-def test_addition_route():
-    response = client.get("/add?a=5&b=3")
-    assert response.status_code == 200
-    assert response.json() == {"result": 8}
-```
+    ```python
+    def test_addition_route():
+        response = client.get("/add?a=5&b=3")
+        assert response.status_code == 200
+        assert response.json() == {"result": 8}
+    ```
 
 2. **Yellow:** Create the bare minimum implementation in your FastAPI app:
 
-```python
-@app.get("/add")
-def add(a: int, b: int):
-    return {"result": 8}
-```
+    ```python
+    @app.get("/add")
+    def add(a: int, b: int):
+        return {"result": 8}
+    ```
 
 3. **Green:** Refactor to make it dynamic:
 
-```python
-@app.get("/add")
-def add(a: int, b: int):
-    return {"result": a + b}
-```
+    ```python
+    @app.get("/add")
+    def add(a: int, b: int):
+        return {"result": a + b}
+    ```
 
 4. Repeat the process to build **three more** routes:
 
-- `/subtract?a=10&b=4` → `{"result": 6}`
-- `/multiply?a=7&b=6` → `{"result": 42}`
-- `/divide?a=10&b=2` → `{"result": 5}`
+   - `/subtract?a=10&b=4` → `{"result": 6}`
+   - `/multiply?a=7&b=6` → `{"result": 42}`
+   - `/divide?a=10&b=2` → `{"result": 5}`
 
-Use the same Red → Yellow → Green approach for each.
+   Use the same Red → Yellow → Green approach for each.
 
-1. Add edge case tests:
+5. Add edge case tests:
 
-- Subtracting a larger number from a smaller one
-- Multiplying by zero
-- Passing non-integer input (expect FastAPI validation error)
-- Remainders after division
+   - Subtracting a larger number from a smaller one
+   - Multiplying by zero
+   - Passing non-integer input (expect FastAPI validation error)
+   - Remainders after division
 
 6. Run all your tests with `pytest` during each phase to track your progress.
 
