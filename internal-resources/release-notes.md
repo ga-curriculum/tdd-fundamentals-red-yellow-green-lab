@@ -3,9 +3,7 @@
   <span class="subhead">Release Notes</span>
 </h1>
 
-## Version 1.0 - Updates from legacy content
-
-This release modularizes the legacy [tktk previous lab name] lab and provides some other minor updates detailed below.
+## Version 1.0 - This is new content.
 
 ### Release details
 
