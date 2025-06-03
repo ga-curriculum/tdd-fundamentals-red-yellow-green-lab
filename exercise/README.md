@@ -26,9 +26,7 @@ def test_area_of_square():
     assert area(5, 3) == 15
 ```
 
-> 🧑‍💼 You haven’t defined `area()` yet. This test should fail—it’s your starting line.
-
----
+> ❌ You haven’t defined `area()` yet. This test should fail—it’s your starting line.
 
 ### 🟡 Section 2: Yellow — Make It Pass, Quickly
 
@@ -53,8 +51,6 @@ def area(width, height):
 
 > ✅ This passes the test by returning the expected value—hardcoded for now.
 
----
-
 ### 🟢 Section 3: Green — Refactor and Improve
 
 **Goal:** Improve the implementation without changing the behavior.
@@ -78,13 +74,11 @@ def area(width, height):
 
 > ✨ Now it works for any dimensions, like `(4, 2) → 8` or `(10, 10) → 100`.
 
----
-
 ## Now lets look at a more challenging context
 
 ### 🔴 Red — Write a Failing Test First
 
-this time we will create a FastAPI route that performs a simple operation like reversing a string sent as a URL parameter.
+This time we will create a `FastAPI` route that performs a simple operation like reversing a string sent as a URL parameter.
 
 ```python
 from fastapi.testclient import TestClient
@@ -98,7 +92,7 @@ def test_reverse_string_route():
     assert response.json() == {"reversed": "olleh"}
 ```
 
-> The /reverse route doesn't exist yet, so this test fails. That's expected—it's your red phase.
+> ❌ The /reverse route doesn't exist yet, so this test fails. That's expected—it's your red phase.
 
 ### 🟡 Yellow — Make It Pass, Quickly
 
@@ -171,8 +165,6 @@ You are building a currency conversion utility that supports converting between 
 
 - A `converter.py` file with your function.
 - A `test_converter.py` file with at least 3 tests.
-
----
 
 ## Part 2 - Build a TDD-Driven Calculator API
 
